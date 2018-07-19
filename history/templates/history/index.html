@@ -1,0 +1,10 @@
+<h1>Artists</h1>
+{% if all_artists %}
+    <ul>
+    {% for artist in all_artists %}
+        <li><a href="/history/{{ artist.id }}/">{{ artist.artist_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No artists available.</p>
+{% endif %}

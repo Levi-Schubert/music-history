@@ -1,0 +1,9 @@
+<h1>{{ artist.artist_name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<ul>
+{% for detail in artist.details_set.all %}
+	<li>{{detail.details_text}}</li>
+{% endfor %}
+</ul>
